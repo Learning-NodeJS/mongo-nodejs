@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "a3f0122c-9552-4f27-9a15-76073c70c62d",
+		"name": "ItemCode",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Item Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fileName\": \"test2.csv\",\r\n    \"fileUrl\": \"test4.url\",\r\n    \"status\": \"uploaded\",\r\n    \"owner\": \"SM412\",\r\n    \"createBy\": \"SM412\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/v1/itemCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"itemCode"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Item Code Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Sambit/Downloads/first.csv"
+						},
+						{
+							"key": "fileName",
+							"value": "first.csv",
+							"type": "default"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Item Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/v1/itemCode",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"itemCode"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
